@@ -1,0 +1,8 @@
+aws_region          = "eu-west-1"
+domain_name         = "dark.dedyn.io"
+admin_email         = "dark0gf@gmail.com"
+rule_set_name       = "supplier-email-inbound"
+manage_ses_identity = false
+
+# Set to true if this stack should mark rule_set_name as active.
+activate_rule_set = true

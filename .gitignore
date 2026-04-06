@@ -2,8 +2,8 @@ node_modules/
 dist/
 .next/
 .turbo/
+.codex/
 .env
-.env.*
 *.log
 backend/data/
 backend/uploads/

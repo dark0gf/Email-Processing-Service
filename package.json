@@ -1,0 +1,44 @@
+{
+  "name": "interview-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.17.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "type-check": "turbo run type-check",
+    "frontend:dev": "pnpm --filter frontend dev",
+    "frontend:build": "pnpm --filter frontend build",
+    "frontend:type-check": "pnpm --filter frontend type-check",
+    "backend:dev": "bash -lc 'set -a && source .env && set +a && pnpm --filter backend start:dev'",
+    "backend:build": "pnpm --filter backend build",
+    "backend:type-check": "pnpm --filter backend type-check",
+    "backend:db:generate": "pnpm --filter backend db:generate",
+    "backend:db:migrate": "bash -lc 'set -a && source .env && set +a && pnpm --filter backend db:migrate'",
+    "tf:fmt": "terraform -chdir=terraform fmt -recursive",
+    "tf:init": "terraform -chdir=terraform init",
+    "tf:init:local": "terraform -chdir=terraform init -backend=false",
+    "tf:validate": "bash ./scripts/load-terraform-env.sh validate",
+    "tf:plan": "bash ./scripts/load-terraform-env.sh plan",
+    "tf:apply": "bash ./scripts/load-terraform-env.sh apply",
+    "tf:destroy": "bash ./scripts/load-terraform-env.sh destroy",
+    "send-test-email": "bash -lc 'set -a && source .env && set +a && pnpm --filter backend exec tsx ../scripts/send-test-email.ts \"$@\"' --"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.7.4",
+    "turbo": "^2.3.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@nestjs/core", "@swc/core", "esbuild"]
+  }
+}

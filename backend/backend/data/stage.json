@@ -1,0 +1,20 @@
+{
+  "emails": [
+    {
+      "id": "1a88bfd4-8906-48ba-8ff2-e089a9f5f642",
+      "messageId": "<CANEYD5jEX0fGp9XGNKc6J6TYJ68QG_avWCbKFCCx6xq31MRZ9Q@mail.gmail.com>",
+      "from": "dark0gf@gmail.com",
+      "subject": "test",
+      "bodyText": "test",
+      "classification": "other",
+      "processingStatus": "ignored",
+      "rawS3Key": "raw/g43ff9jkgojn76lvu4q0b2aqm99v48lrf0mbp0g1",
+      "attachments": [],
+      "receivedAt": "2026-04-05T20:25:58.451Z",
+      "createdAt": "2026-04-05T20:25:58.451Z",
+      "updatedAt": "2026-04-05T20:26:02.583Z"
+    }
+  ],
+  "supplierFiles": [],
+  "dealQuestions": []
+}
