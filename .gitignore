@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.next/
+.turbo/
+.env
+.env.*
+*.log
+backend/data/
+backend/uploads/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+.terraform-credentials
+
+# Temporary / accidental files
+output.txt
+login --help
